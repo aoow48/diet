@@ -1,0 +1,27 @@
+2017-07-10 06:07:30 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 47
+Stack Trace:
+#0 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Connection.php(365): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Database\Connection.php(384): Cake\Database\Connection->getSchemaCollection()
+#8 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1014): Cake\Database\Connection->schemaCollection()
+#9 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(966): Bake\Shell\Task\ModelTask->_getAllTables()
+#10 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(209): Bake\Shell\Task\ModelTask->listAll()
+#11 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(127): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#12 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(110): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#13 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Users')
+#14 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\BakeShell.php(257): Bake\Shell\Task\ModelTask->main('Users')
+#15 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#16 C:\MAMP\htdocs\diet\vendor\cakephp\bake\src\Shell\BakeShell.php(258): Cake\Collection\Collection->each(Object(Closure))
+#17 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Console\Shell.php(458): Bake\Shell\BakeShell->all('Users')
+#18 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#20 C:\MAMP\htdocs\diet\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#21 C:\MAMP\htdocs\diet\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#22 {main}
+
+
